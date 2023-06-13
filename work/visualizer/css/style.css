@@ -1,0 +1,48 @@
+body,html{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.object01{
+    position: relative;
+    margin: 1em;
+    padding: 0;
+
+    background-position: center;
+    background-size: auto 100%;
+    box-shadow:
+    inset 0 -3em 3em rgba(0,0,0,0.0),
+          0.3em 0.3em 1em rgba(0,0,0,0.3);
+
+    
+    font-family: 'Open Sans', sans-serif;
+
+    border-radius: 1em;
+    width: 500px;
+    height: 300px;
+
+    transition: all 0.5s ease;
+}
+
+.object01 h3{
+    position: absolute;
+    top: 0.25em;
+    left: 0.5em;
+    color: rgb(230, 230, 230);
+    font-size: 40px;
+}
+
+
+.object01 h4{
+    position: absolute;
+    bottom: 0.5em;
+    right: 1em;
+    color: rgb(255, 188, 62);
+    font-size: 40px;
+}
+
+.object01:hover{
+    margin-top: -0.5em;
+}

@@ -1,0 +1,162 @@
+/***************************************
+*********** ~ Variables ~ ************
+***************************************/
+
+:root{
+    /*web service*/
+    --ws-screen-h2:rgb(82, 82, 82); 
+    --ws-screen-h3:rgb(133, 133, 133); 
+
+     /*footer*/
+     --page-footer-h3:rgb(82, 82, 82); 
+     --page-footer-a:rgb(109, 109, 109); 
+     --page-footer-p:rgb(134, 134, 134); 
+     --page-footer-layout:rgb(179, 179, 179); 
+}
+
+/***************************************
+*********** ~ NAV ~ ************
+***************************************/
+
+nav img{
+    width: 100px;
+    height: 100px;
+}
+
+/***************************************
+*********** ~ WEB SERVICE ~ ************
+***************************************/
+
+.ws-screen .intro{
+    font-size: 25px;
+    color: var(--ws-screen-h3);
+}
+.ws-screen .intro .url{
+    margin-top: 1em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--ws-screen-h2);
+}
+
+.ws-screen h2{
+    margin-top: 1em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 90px;
+    color: var(--ws-screen-h2);
+}
+
+.ws-screen .get  div:nth-child(1){
+    backdrop-filter: blur(5px);
+    border-radius: 1em;
+        box-shadow:
+            inset 0 -3em 3em rgba(0, 0, 0, 0.0),
+            0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+
+}
+
+.ws-screen .get  div button{
+    backdrop-filter: blur(5px);
+    border-radius: 1em;
+        box-shadow:
+            inset 0 -3em 3em rgba(0, 0, 0, 0.0),
+            0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+
+}
+.ws-screen .get .url{
+    font-weight: bold;
+    padding: 0.25em 1em;
+    font-size: 30px;
+    color: var(--ws-screen-h2);
+}
+
+.ws-screen .post  div:nth-child(1){
+    backdrop-filter: blur(5px);
+    border-radius: 1em;
+        box-shadow:
+            inset 0 -3em 3em rgba(0, 0, 0, 0.0),
+            0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+
+}
+
+.ws-screen .post  div button{
+    backdrop-filter: blur(5px);
+    border-radius: 1em;
+        box-shadow:
+            inset 0 -3em 3em rgba(0, 0, 0, 0.0),
+            0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+
+}
+.ws-screen .post .url{
+    font-weight: bold;
+    padding: 0.25em 1em;
+    font-size: 30px;
+    color: var(--ws-screen-h2);
+}
+
+.ws-screen .get h3{
+    font-weight: bold;
+    padding: 0.25em 1em;
+    font-size: 30px;
+    color: var(--ws-screen-h2);
+}
+
+.ws-screen .post .url{
+    font-weight: bold;
+    padding: 0.25em 1em;
+    font-size: 30px;
+    color: var(--ws-screen-h2);
+}
+
+.ws-screen .post h3{
+    font-weight: bold;
+    padding: 0.25em 1em;
+    font-size: 30px;
+    color: var(--ws-screen-h2);
+}
+
+.ws-screen i{
+    color: var(--ws-screen-h2);
+    font-size: 40px;
+}
+
+.ws-screen p{
+    font-size: 20px;
+    color: var(--ws-screen-h3);
+}
+
+.ws-screen pre{
+    font-size: 20px;
+    color: var(--ws-screen-h3);
+}
+
+/***************************************
+************* ~ FOOTER ~ ***************
+***************************************/
+.page-footer{
+    margin-top: 8em;
+}
+
+.page-footer h3{
+    color: var(--page-footer-h3);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.page-footer b{
+    color: var(--page-footer-a);
+}
+.page-footer p{
+    font-size: 18px;
+    color: var(--page-footer-p);
+
+}
+.page-footer hr{
+    font-size: 18px;
+    color: var(--page-footer-layout);
+}
+.page-footer a{
+    font-size: 18px;
+    color: var(--page-footer-a);
+}

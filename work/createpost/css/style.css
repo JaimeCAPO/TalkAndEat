@@ -1,0 +1,214 @@
+body, html{
+    display: flex;
+    justify-content: center;
+}
+
+:root{
+    --createPost-color-primary:rgb(59, 59, 59);
+    --createPost-color-bg:rgb(255, 255, 255);
+    --createPost-color-h2:rgb(73, 73, 73);
+    --createPost-color-bg-ingredients:rgba(197, 197, 197, 0.719);
+    --createPost-color-ingredient:rgba(153, 153, 153, 0.712);
+    --createPost-color-step:rgba(122, 122, 122, 0.795);
+
+}
+
+.receta{
+    background-color: var(--createPost-color-bg);
+    border-radius: 1em;
+    box-shadow:
+    inset 0 -3em 3em rgba(0,0,0,0.0),
+          0.3em 0.3em 1em rgba(0,0,0,0.4);
+
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(73, 73, 73);
+    font-size: 16px;
+
+}
+.receta-header{
+    margin: 1em 0;
+    padding: 0.5em;
+
+}
+.receta .receta-header-title {
+    display:flex;
+    gap: 1em;
+}
+.receta .receta-header-title label{
+    color: var( --createPost-color-h2);
+    font-size: 40px;
+    padding-left: 10px;
+    
+    
+}
+
+.receta .receta-header hr{
+    height: 2px;
+    border: 0px;
+    background-color: var( --createPost-color-primary);
+}
+
+.receta .receta-header .receta-details{
+    display: flex;
+    gap: 3em;
+}
+
+.receta .receta-header .receta-details .details-title{
+    color: rgb(158, 158, 158);
+    font-size: 15px;
+    font-weight: bold;
+    text-transform:uppercase;
+}
+
+.receta .receta-header-title label{
+    font-weight: bold;
+}
+
+.receta .receta-header .receta-details .time-mins{
+    display: flex; 
+    gap: 1em;
+    align-items: baseline;
+}
+
+.receta .receta-summary{
+    padding: 0.5em;
+    margin: 1em 0;
+}
+.receta .receta-summary h2{
+    font-weight: bold;
+}
+
+
+.receta .receta-ingredients{
+    background-color: var(--createPost-color-bg-ingredients) ;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+.receta .receta-ingredients h2{
+    margin: 0 0 0.5em 0;
+    font-weight: bold;
+}
+
+.post-receta .new-ingredient{
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    background-color: var(--createPost-color-ingredient);
+    border-radius: 1em;
+    box-shadow:
+    inset 0 -3em 3em rgba(0,0,0,0),
+          0.3em 0.3em 1em rgba(0,0,0,0.2);
+    font-weight: bold;
+}
+
+.post-receta .new-ingredient input{
+    background-color: var(--createPost-color-ingredient);
+    border-bottom: 3px solid var(--createPost-color-primary);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-weight: bold;
+}
+
+.post-receta .new-ingredient select{
+    background-color: var(--createPost-color-ingredient);
+    border-bottom: 3px solid var(--createPost-color-primary);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-weight: bold;
+}
+.receta .receta-elaboration {
+    margin-bottom: 1em;
+    padding: 0.5em;
+
+}
+.receta .receta-elaboration h2{
+    padding: 0.25em 0;
+    color: var( --createPost-color-h2);
+    font-weight: bold;
+}
+
+.post-receta .new-step{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    padding: 1em;
+    background-color: var(--createPost-color-step);
+    border-radius: 1em;
+    box-shadow:
+    inset 0 -3em 3em rgba(0,0,0,0),
+          0.3em 0.3em 1em rgba(0,0,0,0.2);
+    font-weight: bold;
+    margin: 0.5em 0;
+}
+
+.post-receta .new-step textarea{
+    background-color: var(--createPost-color-step);
+    border-bottom: 3px solid var(--createPost-color-primary);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-weight: bold;
+}
+.post-receta .btn-delete-ingredient{
+    font-size: 30px; 
+}
+
+.post-receta .btn-new-step-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.post-receta .btn-new-step{
+    font-size: 40px;
+    margin-top: 0.6em;
+    margin-bottom: -0.6em;
+}
+
+.post-receta .btn-add-img{
+    height: auto;
+    border: 3px dashed rgb(219, 219, 219);
+    border-radius: 1em;
+    margin: 1em 0;
+    box-shadow:
+    inset 0 -3em 3em rgba(0,0,0,0.0),
+          0.3em 0.3em 1em rgba(0,0,0,0.2);
+          color: gray;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    padding: 1em;   
+}
+
+.post-receta .btn-add-img >div{
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1em;
+}
+.post-receta .btn-add-img i{
+    font-size: 30px;
+}
+.post-receta .btn-add-img h2{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.post-receta .btn-post-receta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    border: 2px solid gray;
+    width: 300px;
+    height: 100px;
+    margin: 2em 0;
+    color: white;
+    font-size: 40px;
+    background-color: var(--createPost-color-primary);
+}

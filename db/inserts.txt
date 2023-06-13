@@ -1,0 +1,164 @@
+create database TalkAndEat;
+use TalkAndEat; 
+   CREATE TABLE USUARIO (
+        ID_usuario INT NOT NULL IDENTITY(1,1),
+        nombre VARCHAR(50) NOT NULL UNIQUE,
+        contrasena VARCHAR(255) NOT NULL,
+        correo_electronico VARCHAR(255) NOT NULL UNIQUE,
+        biografia TEXT,
+        foto_perfil VARCHAR(255),
+        PRIMARY KEY (ID_usuario)
+    );
+
+    CREATE TABLE PUBLICACION (
+        ID_publicacion INT NOT NULL IDENTITY(1,1),
+        ID_usuario INT NOT NULL,
+        titulo VARCHAR(255) NOT NULL,
+        descripcion TEXT NOT NULL,
+        imagen VARCHAR(255),
+        duracion INT NOT NULL,
+        dificultad VARCHAR(50) NOT NULL,
+        PRIMARY KEY (ID_publicacion),
+        FOREIGN KEY (ID_usuario) REFERENCES USUARIO(ID_usuario)
+    );
+
+    CREATE TABLE INGREDIENTE (
+        ID_ingrediente INT NOT NULL IDENTITY(1,1),
+        nombre VARCHAR(50) NOT NULL,
+        PRIMARY KEY (ID_ingrediente)
+    );
+
+    CREATE TABLE PUBLICACION_INGREDIENTE (
+        ID_publicacion INT NOT NULL,
+        ID_ingrediente INT NOT NULL,
+		unidad varchar(50) not null, 
+		cantidad int not null, 
+        PRIMARY KEY (ID_publicacion, ID_ingrediente),
+        FOREIGN KEY (ID_publicacion) REFERENCES PUBLICACION(ID_publicacion),
+        FOREIGN KEY (ID_ingrediente) REFERENCES INGREDIENTE(ID_ingrediente)
+    );
+
+    CREATE TABLE PUBLICACION_PASO(
+        ID_publicacion INT NOT NULL,
+        ID_paso INT NOT NULL IDENTITY(1,1),
+        orden int not null ,
+        texto TEXT NOT NULL,
+        FOREIGN KEY (ID_publicacion) REFERENCES PUBLICACION(ID_publicacion),
+    );
+
+    CREATE TABLE COMENTARIO (
+        ID_comentario INT NOT NULL IDENTITY(1,1),
+        ID_publicacion INT NOT NULL,
+        ID_usuario INT NOT NULL,
+        texto TEXT NOT NULL,
+        PRIMARY KEY (ID_comentario),
+        FOREIGN KEY (ID_usuario) REFERENCES USUARIO(ID_usuario),
+        FOREIGN KEY (ID_publicacion) REFERENCES PUBLICACION(ID_publicacion)
+    );
+
+    CREATE TABLE SEGUIDOR (
+        ID_usuario_seguidor INT NOT NULL,
+        ID_usuario_seguido INT NOT NULL,
+        estado bit default 0,
+        PRIMARY KEY (ID_usuario_seguidor, ID_usuario_seguido),
+        FOREIGN KEY (ID_usuario_seguidor) REFERENCES USUARIO(ID_usuario),
+        FOREIGN KEY (ID_usuario_seguido) REFERENCES USUARIO(ID_usuario)
+    );
+
+    CREATE TABLE CHAT (
+        ID_chat INT NOT NULL IDENTITY(1,1),
+        ID_usuario1 INT NOT NULL,
+        ID_usuario2 INT NOT NULL,
+        PRIMARY KEY (ID_chat),
+        FOREIGN KEY (ID_usuario1) REFERENCES USUARIO(ID_usuario),
+        FOREIGN KEY (ID_usuario2) REFERENCES USUARIO(ID_usuario)
+    );
+
+    CREATE TABLE MENSAJE (
+        ID_mensaje INT NOT NULL IDENTITY(1,1),
+        ID_chat INT NOT NULL,
+        ID_usuario_emisor INT NOT NULL,
+        texto TEXT NOT NULL,
+        fecha DATETIME NOT NULL,
+        PRIMARY KEY (ID_mensaje),
+        FOREIGN KEY (ID_chat) REFERENCES CHAT(ID_chat),
+        FOREIGN KEY (ID_usuario_emisor) REFERENCES USUARIO(ID_usuario)
+    );
+
+CREATE TABLE NOTIFICACION (
+    ID_notificacion INT NOT NULL AUTO_INCREMENT,
+    ID_usuario INT NOT NULL,
+    texto_descriptivo TEXT NOT NULL,
+    emisor VARCHAR(50),
+    objetivo_usuario INT,
+    objetivo_post INT,
+    fecha DATETIME DEFAULT CURRENT_TIMESTAMP,
+    tipo VARCHAR(50) NOT NULL,
+    visible BIT DEFAULT 1,
+    PRIMARY KEY (ID_notificacion),
+    FOREIGN KEY (ID_usuario) REFERENCES USUARIO(ID_usuario)
+);
+
+//////
+////// USUARIO
+//////
+
+select * from USUARIO;
+insert into USUARIO (nombre,contrasena,correo_electronico) values ('test0', 'abc123.','test0@gmail.com');
+
+//////
+////// INGREDIENTE
+//////
+
+select * from INGREDIENTE;
+insert into INGREDIENTE (nombre) values ('ingrediente');
+
+//////
+////// PUBLICACION
+//////
+
+select * from PUBLICACION;
+insert into PUBLICACION (ID_usuario, titulo,descripcion, duracion,dificultad) values (2,'Tortitas con platano','Tortitas saludable con platano',40,'facil');
+
+//////
+////// PUBLICACION_INGREDIENTE
+//////
+
+select * from PUBLICACION_INGREDIENTE;
+insert into PUBLICACION_INGREDIENTE (ID_publicacion, ID_ingrediente, unidad, cantidad) values (1,1,'ml',100);
+
+//////
+////// PUBLICACION_PASO
+//////
+
+select * from PUBLICACION_PASO;
+insert into PUBLICACION_PASO (ID_publicacion, orden, texto) values (1,1,'hechar la avena en un boll');
+
+
+//////
+////// COMENTARIO
+//////
+
+select * from COMENTARIO;
+insert into COMENTARIO (ID_publicacion, ID_usuario, texto) values (1, 1, 'prueba de comentario');
+
+//////
+////// SEGUIDOR
+//////
+
+select * from SEGUIDOR; 
+insert into SEGUIDOR(ID_usuario_seguidor, ID_usuario_seguido) values(2,3);
+
+//////
+////// CHAT
+//////
+
+select * from CHAT; 
+insert into CHAT(ID_usuario1, ID_usuario2) values(2,3);
+
+//////
+////// MENSAJE
+//////
+
+select * from MENSAJE; 
+insert into MENSAJE(ID_chat, ID_usuario_emisor, texto, fecha) values(1,2,'Hola bro',CURRENT_TIMESTAMP);

@@ -1,0 +1,51 @@
+:root{
+    --account-color-h2:rgb(59, 59, 59);
+    --account-color-h3:rgb(75, 75, 75);
+    --account-color-bg-biografy:rgba(197, 197, 197, 0.719);
+    --account-color-typepost-active:rgb(104, 104, 104);
+    --account-color-typepost:rgb(185, 185, 185);
+
+}
+
+.account-screen-userstats{ 
+    display: flex; 
+    justify-content: space-between;
+    align-items: end;
+}
+.account-screen-userstats h2{ 
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--account-color-h2);
+}
+.account-screen-userstats h3{ 
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--account-color-h3);
+}
+.account-screen-follows{ 
+    display: flex; 
+    justify-content: space-between;
+}
+.account-screen-follows h3{ 
+    font-size: 20px;
+    color: var(--account-color-h3);
+
+}
+
+.account-screen-biografy {
+    background-color: var(--account-color-bg-biografy);
+    border-radius: 1em;
+    font-size: 13px;
+    padding: 0.5em;
+    margin: 1em -0.5em;
+}
+
+.account-screen-typeposts{
+    font-family: 'Great Vibes', cursive;
+    color: var(--account-color-typepost);
+}
+
+.account-screen-typeposts .active{
+    font-family: 'Great Vibes', cursive;
+    color: var(--account-color-typepost-active);
+}

@@ -1,0 +1,140 @@
+:root{
+    /*login variables*/
+    --login-screen-color-h1:rgb(58, 58, 58);
+    --login-screen-color-h2:rgb(116, 116, 116);
+    --login-screen-color-reg:rgb(150, 150, 150);
+    --login-screen-color-interrogation:rgb(255, 69, 69);
+    --login-screen-error:rgb(255, 64, 64);
+    --login-screen-color-input:rgb(197, 197, 197);
+
+    /*register variables*/
+    --register-screen-color-h1:rgb(58, 58, 58);
+    --register-screen-color-h2:rgb(116, 116, 116);
+    --register-screen-color-reg:rgb(150, 150, 150);
+    --register-screen-error:rgb(255, 64, 64);
+    --register-screen-color-input:rgb(197, 197, 197);
+
+
+}
+
+/*************************************
+************* ~ LOGIN ~ **************
+*************************************/
+
+.login-screen h2{
+    font-size: 70px;
+    padding: 0;
+    margin-bottom: 0.15em;
+    color: var(--login-screen-color-h1);
+}
+.login-screen label{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0;
+    margin-bottom: 0.15em;
+    color: var(--login-screen-color-h2);
+}
+.login-screen input{
+    border: 1px solid var(--login-screen-color-input);
+}
+
+
+.login-screen .login-screen-separator{
+    display: flex;
+    justify-content: center;
+    gap: 1;
+    
+}
+.login-screen .login-screen-separator hr{
+    width: 35%;
+    height: 2px;
+    border: none;
+    background-color: grey;
+}
+.login-screen .login-screen-separator p{
+    padding: 0.5em 1em;
+    font-family: 'Great Vibes', cursive;
+}
+
+.login-screen .password{
+    position: relative;
+}
+
+.login-screen .error{
+    margin-top: -0.5em;
+    margin-bottom: 0;
+    opacity: 0;
+    color: var(--login-screen-error);
+    transition: opacity 0.3s ease;
+}
+.login-screen .remember-password{
+    position: absolute;
+    top: 0;
+    right: -25px;
+    font-size: 25px;
+    font-family: 'Great Vibes', cursive;
+    text-decoration: none;
+    color: var(--login-screen-color-interrogation);
+}
+
+.login-screen a{
+    font-size: 25px;
+    font-family: 'Great Vibes', cursive;
+    text-decoration: none;
+    color: var(--login-screen-color-reg);
+}
+
+.login-screen .btn-login{
+    background-color: var(--login-screen-color-h2);
+    padding: 1em;
+    color: white;
+    font-size: 20px ;
+    font-weight: bold;
+}
+
+/*************************************
+*********** ~ REGISTER ~ *************
+*************************************/
+
+
+.register-screen h2{
+    font-size: 70px;
+    padding: 0;
+    margin-bottom: 0.15em;
+    color: var(--register-screen-color-h1);
+}
+.register-screen label{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0;
+    margin-bottom: 0.15em;
+    color: var(--register-screen-color-h2);
+}
+.register-screen div{
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+.register-screen a{
+    font-size: 25px;
+    font-family: 'Great Vibes', cursive;
+    background-color: var(--register-screen-color-reg);
+    color: white;
+    margin-bottom: 2em;
+}
+.register-screen a:hover{
+    border: 1px solid var(--register-screen-color-reg);
+    color: var(--register-screen-color-reg);
+}
+
+.register-screen input{
+    text-decoration: none;
+}
+
+.register-screen .error{
+    margin-top: -0.5em;
+    margin-bottom: 0;
+    opacity: 0;
+    color: var(--login-screen-error);
+    transition: opacity 0.3s ease;
+}

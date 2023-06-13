@@ -1,0 +1,241 @@
+
+:root{
+    /*login variables*/
+    --login-screen-color-h1:rgb(58, 58, 58);
+    --login-screen-color-h2:rgb(116, 116, 116);
+    --login-screen-color-reg:rgb(150, 150, 150);
+    --login-screen-color-interrogation:rgb(255, 69, 69);
+
+    /*register variables*/
+    --register-screen-color-h1:rgb(58, 58, 58);
+    --register-screen-color-h2:rgb(116, 116, 116);
+    --register-screen-color-reg:rgb(150, 150, 150);
+
+    /*alerts variables*/
+    /*register*/
+    --register-alert-color-success:#19bd70;
+    --register-alert-color-title:rgba(70, 70, 70, 0.541);
+    --register-alert-color-status:rgba(70, 70, 70, 1);
+    --register-alert-color-message:rgba(70, 70, 70, 0.7);
+
+    /*post*/
+    --post-alert-color-success:#0059ff;
+    --post-alert-color-title:rgba(70, 70, 70, 0.541);
+    --post-alert-color-status:rgba(70, 70, 70, 1);
+    --post-alert-color-message:rgba(70, 70, 70, 0.7);
+
+}
+
+/*************************************
+********** ~ REGISTER ALERT ~ ************
+*************************************/
+
+.register-success-alert{
+    position: absolute;
+    bottom: 3em;
+    right: 3em;
+    background-image: url(../img/bg-alas-verde.png);
+    background-repeat: no-repeat;
+    background-size: cover cover;
+    width:fit-content;
+    border-radius: 1em;
+    box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+    opacity: 0;
+    animation: appear 0.7s ease 0.7s forwards;
+
+
+}
+.register-success-alert > div{
+    background-color: rgba(255, 255, 255, 0.8);
+    background-repeat: no-repeat;
+    background-size: auto cover;
+    backdrop-filter: blur(3px);
+    border-radius: 1em;
+
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    gap: 1em;
+
+    
+}
+
+.register-success-alert > div :nth-child(1){
+    margin-top: 0.1em;
+    flex: 1;
+    color: var(--register-alert-color-success);
+    font-size: 50px;
+}
+.register-success-alert > div > :nth-child(3){
+    flex: 1;
+    color: var(--register-alert-color-message);
+    font-size: 40px;
+    margin: 0;    
+    margin-left: 0.5em;
+
+    margin-right: -0.5em;
+}
+
+.register-success-alert .register-success-alert-info {
+    flex: 5;
+}
+
+.register-success-alert .register-success-alert-info .title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.register-success-alert .register-success-alert-info .title h3{
+    color: var(--register-alert-color-title);
+    font-size:20px;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+}
+.register-success-alert .register-success-alert-info :nth-child(2){
+    color: var(--register-alert-color-status);
+    font-size:20px;
+    margin-bottom: 0;
+}
+.register-success-alert .register-success-alert-info :nth-child(3){
+    color: var(--register-alert-color-message);
+    font-size:16px;
+    
+}
+.register-success-alert-delete > div{
+    animation: disappear-content 0.7s ease ;
+
+}
+
+.register-success-alert-delete{    
+    animation: disappear 0.7s ease ;
+
+}
+
+/*************************************
+********** ~ POST ALERT ~ ************
+*************************************/
+
+.post-success-alert{
+    position: absolute;
+    bottom: 3em;
+    right: 3em;
+    background-image: url(../img/bg-alas-azul.png);
+    background-repeat: no-repeat;
+    background-size: cover cover;
+    width:fit-content;
+    border-radius: 1em;
+    box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+    opacity: 0;
+    animation: appear 0.7s ease 0.7s forwards;
+
+
+}
+.post-success-alert > div{
+    background-color: rgba(255, 255, 255, 0.8);
+    background-repeat: no-repeat;
+    background-size: auto cover;
+    backdrop-filter: blur(3px);
+    border-radius: 1em;
+
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    gap: 1em;
+
+    
+}
+
+.post-success-alert > div :nth-child(1){
+    margin-top: 0.1em;
+    flex: 1;
+    color: var(--post-alert-color-success);
+    font-size: 50px;
+}
+.post-success-alert > div > :nth-child(3){
+    flex: 1;
+    color: var(--post-alert-color-message);
+    font-size: 40px;
+    margin: 0;    
+    margin-left: 0.5em;
+
+    margin-right: -0.5em;
+}
+
+.post-success-alert .post-success-alert-info {
+    flex: 5;
+}
+
+.post-success-alert .post-success-alert-info .title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-success-alert .post-success-alert-info .title h3{
+    color: var(--post-alert-color-title);
+    font-size:20px;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+}
+.post-success-alert .post-success-alert-info :nth-child(2){
+    color: var(--post-alert-color-status);
+    font-size:20px;
+    margin-bottom: 0;
+}
+.post-success-alert .post-success-alert-info :nth-child(3){
+    color: var(--post-alert-color-message);
+    font-size:16px;
+    
+}
+.post-success-alert-delete > div{
+    animation: disappear-content 0.7s ease ;
+
+}
+
+.post-success-alert-delete{    
+    animation: disappear 0.7s ease ;
+
+}
+
+
+@keyframes appear{
+    0%{
+        visibility: hidden;
+        opacity:0;
+    }
+
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+@keyframes disappear {
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    25%{
+
+    }
+    100%{
+        visibility: hidden;
+        opacity:0;
+    }
+}
+@keyframes disappear-content {
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    75%{
+        opacity: 0.7;
+    }
+    100%{
+        visibility: hidden;
+        opacity:0;
+    }
+}

@@ -1,0 +1,191 @@
+/***************************************
+*********** ~ Variables ~ ************
+***************************************/
+
+:root{
+    /*login variables*/
+    --login-screen-color-h1:rgb(58, 58, 58);
+    --login-screen-color-h2:rgb(116, 116, 116);
+    --login-screen-color-reg:rgb(150, 150, 150);
+    --login-screen-color-interrogation:rgb(255, 69, 69);
+
+    /*register variables*/
+    --register-screen-color-h1:rgb(58, 58, 58);
+    --register-screen-color-h2:rgb(116, 116, 116);
+    --register-screen-color-reg:rgb(150, 150, 150);
+
+    /*alerts variables*/
+    /*register*/
+    --register-alert-color-success:#19bd70;
+    --register-alert-color-title:rgba(70, 70, 70, 0.541);
+    --register-alert-color-status:rgba(70, 70, 70, 1);
+    --register-alert-color-message:rgba(70, 70, 70, 0.7);
+
+    /*post*/
+    --post-alert-color-success:#0059ff;
+    --post-alert-color-title:rgba(70, 70, 70, 0.541);
+    --post-alert-color-status:rgba(70, 70, 70, 1);
+    --post-alert-color-message:rgba(70, 70, 70, 0.7);
+
+    /*menu variables*/
+    --menu-screen-h3:rgb(82, 82, 82);
+    --menu-screen-h3-hover:rgba(0, 0, 0, 0.219);
+    --menu-screen-icons:rgb(82, 82, 82);
+    --menu-screen-icons-back:rgb(129, 129, 129);
+    --menu-screen-active:rgba(0, 0, 0, 1);
+    --menu-screen-active-border:rgb(219, 197, 0);
+
+    /*home*/
+    --home-screen-h2:rgb(82, 82, 82);
+    --home-screen-link:rgb(143, 143, 143);
+
+    /*config*/
+    --config-screen-settings:rgb(102, 102, 102);
+    --config-screen-btn-save:rgba(54, 54, 255, 0.678);    
+    --config-screen-btn-back:rgba(153, 153, 153, 0.575);
+    --config-screen-h2:rgb(82, 82, 82);
+    --config-screen-layout:rgba(160, 160, 160, 0.336);
+    --config-screen-libg:rgba(160, 160, 160, 0.116);
+    --config-screen-libg2:rgb(255, 145, 0);
+    --config-screen-username:rgb(236, 236, 236);
+    --config-screen-username-bg:rgb(53, 53, 53);
+
+}
+
+/***************************************
+************** ~ CONFIG ~ **************
+***************************************/
+.config-screen{
+ margin-top: 1em;   
+}
+.config-screen .config-screen-categories{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid var(--config-screen-layout);
+}
+
+.config-screen .config-screen-categories .config-screen-brand{
+
+}
+
+.config-screen .config-screen-categories .config-screen-username{
+    padding:0.5em 1em;
+    background-color:var(--config-screen-username-bg) ;
+    color: var(--config-screen-username);
+    width: fit-content;
+    border-radius: 1em;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.config-screen .config-screen-categories .list-settings{
+    margin: 0;
+    padding: 0;
+}
+
+.config-screen .config-screen-categories .list-settings h2{
+    padding: 1em 0;
+}
+
+.config-screen .config-screen-categories .list-settings li{
+    width: 100%;
+    padding: 1em;
+    list-style: none;
+}
+.config-screen .config-screen-categories .list-settings li:hover{
+    background-color: var(--config-screen-libg);
+    border-left: 2px solid var(--config-screen-libg2);
+    font-weight: bold;
+}
+.config-screen .config-screen-categories .list-settings li.active{
+    background-color: var(--config-screen-libg);
+    border-left: 2px solid var(--config-screen-libg2);
+    font-weight: bold;
+}
+.config-screen .settings-option  {
+    font-size: 16px;
+    color: var(--config-screen-settings);
+}
+.config-screen .settings-title  {
+    color: var(--config-screen-h2);
+}
+
+.config-screen .config-screen-settings .btn-save{
+    margin: 1em 0.5em;
+    color: white;
+    border: 0;
+    font-size: 25px;
+    background-color: var(--config-screen-btn-save);
+}
+
+.config-screen .config-screen-settings .btn-reset{
+    margin: 1em 0.5em;
+    color: white;
+    border: 0;
+    font-size: 25px;
+    background-color: var(--config-screen-btn-back);
+}
+
+.config-screen .config-screen-settings form{
+    margin: 1em;
+}
+
+.config-screen .btn-delete-account{
+    padding: 1em;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: gray;
+    border: 1px solid gray;
+    color: white;
+}
+
+.config-screen .btn-delete-account:hover{
+    padding: 1em;
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+    border: 1px solid gray;
+}
+/***************************************
+*********** ~ Animaciones ~ ************
+***************************************/
+
+@keyframes appear{
+    0%{
+        visibility: hidden;
+        opacity:0;
+    }
+
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+@keyframes disappear {
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    25%{
+
+    }
+    100%{
+        visibility: hidden;
+        opacity:0;
+    }
+}
+@keyframes disappear-content {
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    75%{
+        opacity: 0.7;
+    }
+    100%{
+        visibility: hidden;
+        opacity:0;
+    }
+}

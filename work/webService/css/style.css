@@ -1,0 +1,140 @@
+/***************************************
+*********** ~ Variables ~ ************
+***************************************/
+
+:root{
+    /*login variables*/
+    --login-screen-color-h1:rgb(58, 58, 58);
+    --login-screen-color-h2:rgb(116, 116, 116);
+    --login-screen-color-reg:rgb(150, 150, 150);
+    --login-screen-color-interrogation:rgb(255, 69, 69);
+
+    /*register variables*/
+    --register-screen-color-h1:rgb(58, 58, 58);
+    --register-screen-color-h2:rgb(116, 116, 116);
+    --register-screen-color-reg:rgb(150, 150, 150);
+
+    /*alerts variables*/
+    /*register*/
+    --register-alert-color-success:#19bd70;
+    --register-alert-color-title:rgba(70, 70, 70, 0.541);
+    --register-alert-color-status:rgba(70, 70, 70, 1);
+    --register-alert-color-message:rgba(70, 70, 70, 0.7);
+
+    /*post*/
+    --post-alert-color-success:#0059ff;
+    --post-alert-color-title:rgba(70, 70, 70, 0.541);
+    --post-alert-color-status:rgba(70, 70, 70, 1);
+    --post-alert-color-message:rgba(70, 70, 70, 0.7);
+
+    /*menu variables*/
+    --menu-screen-h3:rgb(82, 82, 82);
+    --menu-screen-h3-hover:rgba(0, 0, 0, 0.219);
+    --menu-screen-icons:rgb(82, 82, 82);
+    --menu-screen-icons-back:rgb(129, 129, 129);
+    --menu-screen-active:rgba(0, 0, 0, 1);
+    --menu-screen-active-border:rgb(219, 197, 0);
+
+    /*home*/
+    --home-screen-h2:rgb(82, 82, 82);
+    --home-screen-link:rgb(143, 143, 143);
+
+    /*config*/
+    --config-screen-settings:rgb(102, 102, 102);
+    --config-screen-btn-save:rgba(54, 54, 255, 0.678);    
+    --config-screen-btn-back:rgba(153, 153, 153, 0.575);
+    --config-screen-h2:rgb(82, 82, 82);
+    --config-screen-layout:rgba(160, 160, 160, 0.336);
+    --config-screen-libg:rgba(160, 160, 160, 0.116);
+    --config-screen-libg2:rgb(255, 145, 0);
+    --config-screen-username:rgb(236, 236, 236);
+    --config-screen-username-bg:rgb(53, 53, 53);
+    
+
+    /*recipe*/
+    --recipe-screen-h2:rgb(82, 82, 82); 
+    --recipe-screen-h3:rgb(133, 133, 133); 
+    --recipe-screen-bg:rgba(255, 255, 255, 0.808);
+    --recipe-screen-layout:rgb(255, 145, 77);
+    --recipe-screen-whitetext:rgb(255, 255, 255);
+    --recipe-comments-nocommentbg:rgba(255, 198, 124, 0.418);
+
+    /*400-404*/
+    --error-screen-btn:#272d3a;
+    --error-screen-btn-text:white;
+
+    /*follows*/
+    --follows-screen-username:rgb(236, 236, 236);
+    --follows-screen-username-bg:rgb(53, 53, 53);
+    --follows-screen-btn:rgb(255, 145, 77);
+    --follows-screen-link:rgb(61, 61, 61);
+
+    /*admin*/
+    --admin-screen-users:#003fb4;
+    --admin-screen-posts:#13274d;
+    --admin-screen-logs:#272d3a;
+    --admin-screen-logs-console:#111829;
+
+    /*Footer*/
+    --page-footer-h3:rgb(82, 82, 82); 
+    --page-footer-a:rgb(109, 109, 109); 
+    --page-footer-p:rgb(134, 134, 134); 
+    --page-footer-layout:rgb(179, 179, 179); 
+
+    /*web service*/
+    --ws-screen-h2:rgb(82, 82, 82); 
+    --ws-screen-h3:rgb(133, 133, 133); 
+}
+
+
+/***************************************
+*********** ~ WEB SERVICE ~ ************
+***************************************/
+
+.ws-screen .intro{
+    font-size: 25px;
+    color: var(--ws-screen-h3);
+}
+.ws-screen .intro .url{
+    margin-top: 1em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--ws-screen-h2);
+}
+
+.ws-screen h2{
+    margin-top: 1em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 90px;
+    color: var(--ws-screen-h2);
+}
+
+.ws-screen .get .url{
+    font-weight: bold;
+    padding: 0.25em 1em;
+    font-size: 30px;
+    color: var(--ws-screen-h2);
+}
+
+.ws-screen .get h3{
+    font-weight: bold;
+    padding: 0.25em 1em;
+    font-size: 30px;
+    color: var(--ws-screen-h2);
+}
+
+.ws-screen .post .url{
+    font-weight: bold;
+    padding: 0.25em 1em;
+    font-size: 30px;
+    color: var(--ws-screen-h2);
+}
+
+.ws-screen .post h3{
+    font-weight: bold;
+    padding: 0.25em 1em;
+    font-size: 30px;
+    color: var(--ws-screen-h2);
+}

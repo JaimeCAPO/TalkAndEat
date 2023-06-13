@@ -1,0 +1,190 @@
+/***************************************
+*********** ~ Variables ~ ************
+***************************************/
+
+:root{
+    /*login variables*/
+    --login-screen-color-h1:rgb(58, 58, 58);
+    --login-screen-color-h2:rgb(116, 116, 116);
+    --login-screen-color-reg:rgb(150, 150, 150);
+    --login-screen-color-interrogation:rgb(255, 69, 69);
+
+    /*register variables*/
+    --register-screen-color-h1:rgb(58, 58, 58);
+    --register-screen-color-h2:rgb(116, 116, 116);
+    --register-screen-color-reg:rgb(150, 150, 150);
+
+    /*alerts variables*/
+    /*register*/
+    --register-alert-color-success:#19bd70;
+    --register-alert-color-title:rgba(70, 70, 70, 0.541);
+    --register-alert-color-status:rgba(70, 70, 70, 1);
+    --register-alert-color-message:rgba(70, 70, 70, 0.7);
+
+    /*post*/
+    --post-alert-color-success:#0059ff;
+    --post-alert-color-title:rgba(70, 70, 70, 0.541);
+    --post-alert-color-status:rgba(70, 70, 70, 1);
+    --post-alert-color-message:rgba(70, 70, 70, 0.7);
+
+    /*menu variables*/
+    --menu-screen-h3:rgb(82, 82, 82);
+    --menu-screen-h3-hover:rgba(0, 0, 0, 0.219);
+    --menu-screen-icons:rgb(82, 82, 82);
+    --menu-screen-icons-back:rgb(129, 129, 129);
+    --menu-screen-active:rgba(0, 0, 0, 1);
+    --menu-screen-active-border:rgb(219, 197, 0);
+
+    /*home*/
+    --home-screen-h2:rgb(82, 82, 82);
+    --home-screen-link:rgb(143, 143, 143);
+
+}
+
+/***************************************
+*************** ~ HOME ~ ***************
+***************************************/
+
+.home-screen .home-screen-yourMates{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content: center;
+}
+.home-screen .home-screen-yourMates hr{
+    width: 30%;
+}
+
+.home-screen .home-screen-yourMates h2{
+    font-size: 60px;
+    color: var(--home-screen-h2);
+}
+.home-screen .home-screen-othersForYou{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content: center;
+}
+
+.home-screen .home-screen-othersForYou hr{
+    width: 30%;
+}
+.home-screen .home-screen-othersForYou h2{
+    font-size: 60px;
+    color: var(--home-screen-h2);
+}
+.home-screen .home-screen-matescontent{
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding: 1em;
+
+}
+
+.home-screen .home-screen-otherscontent{
+    padding: 1em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.home-screen .btn-vermas{
+    padding: 1em;
+    margin: 1em;
+}
+
+.home-screen .btn-vermas a{
+    color: var(--home-screen-link);
+    text-decoration: none;
+
+}
+
+/***************************************
+************* ~ OBJECTS ~ **************
+***************************************/
+
+
+.object01{
+    position: relative;
+    margin: 0;
+    padding:0;
+
+    background-position: center;
+    background-size: auto 100%;
+    box-shadow:
+    inset 0 -3em 3em rgba(0,0,0,0.0),
+          0.3em 0.3em 1em rgba(0,0,0,0.3);
+
+    
+    font-family: 'Open Sans', sans-serif;
+
+    border-radius: 1em;
+    width: calc(100% - 1em);
+    height: 300px;
+
+    transition: all 0.5s ease;
+}
+
+.object01 h3{
+    position: absolute;
+    top: 0.25em;
+    left: 0.5em;
+    color: rgb(230, 230, 230);
+    font-size: 40px;
+}
+
+
+.object01 h4{
+    position: absolute;
+    bottom: 0.5em;
+    right: 1em;
+    color: rgb(255, 188, 62);
+    font-size: 40px;
+}
+
+.object01:hover{
+    margin-top: -0.5em;
+}
+
+
+
+/***************************************
+*********** ~ Animaciones ~ ************
+***************************************/
+
+@keyframes appear{
+    0%{
+        visibility: hidden;
+        opacity:0;
+    }
+
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+@keyframes disappear {
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    25%{
+
+    }
+    100%{
+        visibility: hidden;
+        opacity:0;
+    }
+}
+@keyframes disappear-content {
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    75%{
+        opacity: 0.7;
+    }
+    100%{
+        visibility: hidden;
+        opacity:0;
+    }
+}
